@@ -2,6 +2,7 @@ import { client } from '@/sanity/lib/client'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Product } from '@/components/Newest'
 
 const page = async({params}:{
     params:{
@@ -27,7 +28,7 @@ console.log(data)
             </div>
             <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
                     {
-                        data.map((product:any)=>(
+                        data.map((product:Product)=>(
                             <div key={product._id} className='group relative '>
                                     <div className="aspect-square w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80">
                                         <Image src={product.imageUrl} alt="product" width={300} height={300} className='w-full h-full object-cover object-center lg:h-full lg:w-full '/>

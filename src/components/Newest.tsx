@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React from 'react'
 
 
-interface Product{
+export interface Product{
     
         imageUrl: string;
         _id: string;

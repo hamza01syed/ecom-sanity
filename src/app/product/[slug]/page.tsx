@@ -13,7 +13,7 @@ export interface fullProduct {
   _id: string;
   price: number;
   name: string;
-  images: any;
+  images: string[];
   price_id:string
 }
 
