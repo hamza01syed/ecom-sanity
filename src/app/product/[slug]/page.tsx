@@ -18,10 +18,11 @@ export interface fullProduct {
 }
 
 const Product = async({params}:{
-    params:{slug:string}
+    params: Promise<{ slug: string }>
 }) => {
+    console.log(params)
 
-    const slug=params.slug
+    const {slug}=await params
     const query=`*[_type=="product" && slug.current=="${slug}"][0]{
   _id,
     price,

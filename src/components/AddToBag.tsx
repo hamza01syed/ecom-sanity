@@ -26,7 +26,8 @@ const AddToBag = ({name,description,price,currency,image,price_id}:ProductCart) 
   return (
     <Button onClick={
         ()=>{
-            addItem(Product),handleCartClick()
+            addItem(Product);
+            handleCartClick();
         }
     }>Add to Cart</Button>
   )
